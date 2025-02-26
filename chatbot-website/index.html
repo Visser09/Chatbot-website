@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot Showcase</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot Showcase</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Remove duplicate script tag here -->
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-        <button id="toggle-sidebar" class="toggle-btn">☰</button>
-        <h2>Choose a Chatbot</h2>
-        <ul>
-            <li onclick="selectBot('business')"> Business Assistant</li>
-            <li onclick="selectBot('ecommerce')"> E-commerce Helper</li>
-            <li onclick="selectBot('customer_support')"> Customer Support</li>
-            <li onclick="selectBot('real_estate')"> Real Estate Agent</li>
-        </ul>
-    </div>
+  <nav class="sidebar" id="sidebar" aria-label="Chatbot selection">
+    <button id="toggle-sidebar" class="toggle-btn" aria-label="Toggle sidebar">☰</button>
+    <h2>Choose a Chatbot</h2>
+    <ul>
+      <li><button class="bot-select" data-bot="business">Business Assistant</button></li>
+      <li><button class="bot-select" data-bot="ecommerce">E-commerce Helper</button></li>
+      <li><button class="bot-select" data-bot="customer_support">Customer Support</button></li>
+      <li><button class="bot-select" data-bot="real_estate">Real Estate Agent</button></li>
+    </ul>
+  </nav>
 
-    <div class="chat-container">
-        <h2 id="chat-title">Chat with AI</h2>
-        <div id="chat-box"></div>
-        <div class="input-area">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="send-btn">➤</button>
-        </div>
+  <section class="chat-container">
+    <h2 id="chat-title">Chat with AI</h2>
+    <div id="chat-box" aria-live="polite"></div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Type a message..." aria-label="Type your message">
+      <button id="send-btn" aria-label="Send message">➤</button>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
